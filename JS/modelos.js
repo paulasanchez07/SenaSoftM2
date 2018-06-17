@@ -1,3 +1,6 @@
+var codProductoGlobal = 0;
+var nombreProductoGlobal = "";
+var cantidadGlobal = 0;
 
 function ejecutarAjax(datos,opc){
 	$.ajax({
@@ -94,6 +97,9 @@ function consultarProductos(select){
 function consultarDatosProducto(select){
 	var parametros = {"opc": 5, "codProducto" : select.value};
 	ejecutarAjax(parametros,5);
+	codProductoGlobal = select.value;
+	nombreProductoGlobal = select.querySelector('option[value="'+select.value+'"]').textContent;
+
 }
 
 function consultarNumPedido(){
@@ -151,7 +157,14 @@ function cargarNumPedido(response){
 	$("#txtFecha").val(response[0]["fecha"]);
 }
 
+function actualizarCantidad(cantidad){
+	cantidadGlobal = cantidad;
+}
+
 //Agrega el producto a la tabla
 function agregarProducto(){
-
+	valorUnitario = $("#txtPrecio").val();
+	stock = $("#txtStock").val();
+	var txt = "<tr><td>"+codProductoGlobal+"</td><td>"+nombreProductoGlobal+"</td><td>"+cantidadGlobal+"</td><td>"+valorUnitario+"</td><td>"+stock+"</td></tr>";
+	$("#bodytabla").append(txt);
 }

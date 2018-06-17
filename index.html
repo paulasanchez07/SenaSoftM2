@@ -49,16 +49,16 @@
 					<h5 class="col-xs-12">Fecha</h5>
 					<input type="text" id="txtFecha" disabled class="col-xs-12"placeholder="ingrese el">
 					<h5 class="col-xs-12">Estado</h5>
-					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<input type="text" id="txtEstado" class="col-xs-12"placeholder="ingrese el">
 					<h5 class="col-xs-12">Comentarios</h5>
-					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<input type="text" id="txtComentarios" class="col-xs-12"placeholder="ingrese el">
 					<button id="btnRealizarPedido" class="btn col-xs-12 ">Realizar Pedido</button>
 				</div>
 			</div>
 			<div id="trabajoCentro">
 				<div id="panelCantidad">
 					<h5 class="col-xs-12">Cantidad a Pedir</h5>
-					<select id="selectCantidad" class=" btn"> 
+					<select id="selectCantidad" onchange="actualizarCantidad(this.value)" class=" btn"> 
 						<option>CANT</option>
 					</select>
 					<button id="btnAceptar" class=" btn " onclick="agregarProducto()">Aceptar</button>
@@ -68,7 +68,7 @@
 				<h3 id="tituloTabla" >Detalle del pedido</h3>
 				<table id="tabla" class="table table-hover table-striped">
 					<thead><th>Codigo</th><th>Producto</th><th>Cantidad</th><th>Vr. Unitario</th><th>Subtotal</th></thead>
-					<tbody>
+					<tbody id="bodytabla">
 						
 					</tbody>
 				</table>
