@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modelos Clasicos</title>
+	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="CSS/modelos.css">
+</head>
+<body>
+	<div class="container">	
+		<div id="cont_norte">
+			<button class="btn btn-primary">Pedidos</button>
+		</div>
+		<div id="cont_Trabajo">
+			<div id="trabajoNorte">
+				<div id="panelCliente" class="col-xs-4">
+					<h5 class="col-xs-12 col-md-12 col-lg-12">Cliente</h5>
+					<select id="selectCliente" class="col-xs-12"> 
+						<option>---CARGUE LOS DATOS---</option>
+					</select>
+					<h5 class="col-xs-12 col-md-12 col-lg-12">Telefono</h5>
+					<input type="text" placeholder="Telefono" class="col-xs-12" id="txtTelefono" name="">
+					<h5 class="col-xs-12 col-md-12 col-lg-12">Correo-e</h5>
+					<input type="text" placeholder="Correo" class="col-xs-12" id="txtCorreo" name="">
+					<h5 class="col-xs-12 col-md-12 col-lg-12">Enlace</h5>
+					<input type="text" placeholder="Enlace" class="col-xs-12" id="txtEnlace" name="">
+					<h5 class="col-xs-12 col-md-12 col-lg-12">Direccion</h5>
+					<input type="text" placeholder="Direccion" class="col-xs-12" id="txtDireccion" name="">
+				</div>
+				<div id="panelGrupo" class="col-xs-4">
+					<h5 class="col-xs-12">Grupo</h5>
+					<select id="selectGrupo" class="col-xs-12"> 
+						<option>---CARGUE LOS Grupos---</option>
+					</select>
+					<h5 class="col-xs-12">Producto</h5>
+					<select id="selectProducto" class="col-xs-12"> 
+						<option>---CARGUE LOS PRODUCTOS---</option>
+					</select>
+					<h5 class="col-xs-12">Descripcion</h5>
+					<input type="text" class="col-xs-12" id="txtDescripcion" name="" placeholder="Ingrese aqui la Descripcion">
+					<h5 class="col-xs-12">Precio Venta</h5>
+					<input type="text" class="col-xs-12" id="txtPreci" name="" placeholder="Ingrese aqui el Precio Venta">
+					<h5 class="col-xs-12">Stock</h5>
+					<input type="text" class="col-xs-12" id="txtStock" name="" placeholder="Ingrese aqui el Stock">
+				</div>
+				<div id="panelPedido" class="col-xs-4">
+					<h5 class="col-xs-12">Pedido Numero</h5>
+					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<h5 class="col-xs-12">Fecha</h5>
+					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<h5 class="col-xs-12">Estado</h5>
+					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<h5 class="col-xs-12">Comentarios</h5>
+					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<button id="btnRealizarPedido" class="btn col-xs-12 ">Realizar Pedido</button>
+				</div>
+			</div>
+			<div id="trabajoCentro">
+				<div id="panelCantidad">
+					<h5 class="col-xs-12">Cantidad a Pedir</h5>
+					<select id="selectCantidad" class=" btn"> 
+						<option>CANT</option>
+					</select>
+					<button id="btnAceptar" class=" btn ">Aceptar</button>
+				</div>
+			</div>
+			<div id="trabajoSur">
+				<h3 id="tituloTabla" >Detalle del pedido</h3>
+				<table id="tabla" class="table table-hover table-striped">
+					<thead><th>Codigo</th><th>Producto</th><th>Cantidad</th><th>Vr. Unitario</th><th>Subtotal</th></thead>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="JS/bootstrap.min.js"></script>
+	<script type="text/javascript" src="JS/modelos.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;
+}
+
+.container{
+	margin: auto;
+	width: 60%;
+	height: 100%;
+
+}
+
+#cont_norte{
+	height: 7%;
+}
+
+#cont_Trabajo{
+	height: 90%;
+}
+
+#trabajoNorte{
+	width: 100%;
+	height: 50%;
+}
+
+#trabajoCentro{
+	width: 100%;
+	height: 10%;
+}
+
+#panelCliente,#panelGrupo,#panelPedido{
+	overflow: scroll;
+	height: 100%;
+	border-style: solid;
+	border-width: 1px;
+}
+
+input,select,.container,#cont_norte{
+	border-style: solid;
+	border-width: 1px;
+}
+
+#trabajoCentro,#trabajoSur{
+	text-align: center;
+}
+
+#trabajoSur{
+	overflow: scroll;
+	height: 40%;
+	width: 100%;
+}
+
+
