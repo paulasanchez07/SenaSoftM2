@@ -9,45 +9,45 @@
 <body>
 	<div class="container">	
 		<div id="cont_norte">
-			<button class="btn btn-primary">Pedidos</button>
+			<button class="btn btn-primary" onclick="consultarDatosPedido()">Pedidos</button>
 		</div>
 		<div id="cont_Trabajo">
 			<div id="trabajoNorte">
 				<div id="panelCliente" class="col-xs-4">
 					<h5 class="col-xs-12 col-md-12 col-lg-12">Cliente</h5>
-					<select id="selectCliente" class="col-xs-12"> 
+					<select id="selectCliente" onchange="consultarCliente(this)" class="col-xs-12"> 
 						<option>---CARGUE LOS DATOS---</option>
 					</select>
 					<h5 class="col-xs-12 col-md-12 col-lg-12">Telefono</h5>
-					<input type="text" placeholder="Telefono" class="col-xs-12" id="txtTelefono" name="">
+					<input type="text" placeholder="Telefono" class="col-xs-12" id="txtTelefono" name="" disabled>
 					<h5 class="col-xs-12 col-md-12 col-lg-12">Correo-e</h5>
-					<input type="text" placeholder="Correo" class="col-xs-12" id="txtCorreo" name="">
+					<input type="text" placeholder="Correo" class="col-xs-12" id="txtCorreo" name=""  disabled>
 					<h5 class="col-xs-12 col-md-12 col-lg-12">Enlace</h5>
-					<input type="text" placeholder="Enlace" class="col-xs-12" id="txtEnlace" name="">
+					<input type="text" placeholder="Enlace" class="col-xs-12" id="txtEnlace" name=""  disabled>
 					<h5 class="col-xs-12 col-md-12 col-lg-12">Direccion</h5>
-					<input type="text" placeholder="Direccion" class="col-xs-12" id="txtDireccion" name="">
+					<input type="text" placeholder="Direccion" class="col-xs-12" id="txtDireccion" name="" disabled>
 				</div>
 				<div id="panelGrupo" class="col-xs-4">
 					<h5 class="col-xs-12">Grupo</h5>
-					<select id="selectGrupo" class="col-xs-12"> 
+					<select id="selectGrupo" onchange="consultarProductos(this)" class="col-xs-12"> 
 						<option>---CARGUE LOS Grupos---</option>
 					</select>
 					<h5 class="col-xs-12">Producto</h5>
-					<select id="selectProducto" class="col-xs-12"> 
+					<select id="selectProducto" onchange="consultarDatosProducto(this)" class="col-xs-12"> 
 						<option>---CARGUE LOS PRODUCTOS---</option>
 					</select>
 					<h5 class="col-xs-12">Descripcion</h5>
-					<input type="text" class="col-xs-12" id="txtDescripcion" name="" placeholder="Ingrese aqui la Descripcion">
+					<input type="text" class="col-xs-12" id="txtDescripcion" name="" placeholder="Ingrese aqui la Descripcion"  disabled>
 					<h5 class="col-xs-12">Precio Venta</h5>
-					<input type="text" class="col-xs-12" id="txtPreci" name="" placeholder="Ingrese aqui el Precio Venta">
+					<input type="text" class="col-xs-12" id="txtPrecio" name="" placeholder="Ingrese aqui el Precio Venta" disabled>
 					<h5 class="col-xs-12">Stock</h5>
-					<input type="text" class="col-xs-12" id="txtStock" name="" placeholder="Ingrese aqui el Stock">
+					<input type="text" class="col-xs-12" id="txtStock" name="" placeholder="Ingrese aqui el Stock" disabled>
 				</div>
 				<div id="panelPedido" class="col-xs-4">
 					<h5 class="col-xs-12">Pedido Numero</h5>
-					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<input type="text" id="txtNumPedido"  class="col-xs-12"placeholder="ingrese el" disabled>
 					<h5 class="col-xs-12">Fecha</h5>
-					<input type="text"  class="col-xs-12"placeholder="ingrese el">
+					<input type="text" id="txtFecha" disabled class="col-xs-12"placeholder="ingrese el">
 					<h5 class="col-xs-12">Estado</h5>
 					<input type="text"  class="col-xs-12"placeholder="ingrese el">
 					<h5 class="col-xs-12">Comentarios</h5>
@@ -61,13 +61,16 @@
 					<select id="selectCantidad" class=" btn"> 
 						<option>CANT</option>
 					</select>
-					<button id="btnAceptar" class=" btn ">Aceptar</button>
+					<button id="btnAceptar" class=" btn " onclick="agregarProducto()">Aceptar</button>
 				</div>
 			</div>
 			<div id="trabajoSur">
 				<h3 id="tituloTabla" >Detalle del pedido</h3>
 				<table id="tabla" class="table table-hover table-striped">
 					<thead><th>Codigo</th><th>Producto</th><th>Cantidad</th><th>Vr. Unitario</th><th>Subtotal</th></thead>
+					<tbody>
+						
+					</tbody>
 				</table>
 			</div>
 		</div>
